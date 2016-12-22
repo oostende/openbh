@@ -263,7 +263,7 @@ class UpdatePluginMenu(Screen):
 					self.session.open(PluginManager, self.skin_path)
 				elif currentEntry == "system-backup":
 					self.session.openWithCallback(self.backupDone,BackupScreen, runBackup = True)
-				elif (currentEntry == "flash-online"):
+				elif currentEntry == "flash-online":
 					self.session.open(FlashOnline)
 				elif currentEntry == "system-restore":
 					if os_path.exists(self.fullbackupfilename):
