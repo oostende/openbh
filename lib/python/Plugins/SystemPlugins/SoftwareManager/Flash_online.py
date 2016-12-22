@@ -26,19 +26,13 @@ ROOTFSBIN = getMachineRootFile()
 KERNELBIN = getMachineKernelFile()
 
 #############################################################################################################
-image = 0 # 0=openATV / 1=openMips
-if distro.lower() == "openmips":
+image = 0 # 0=openblackhole / 1=openbh
+if distro.lower() == "openbh":
 	image = 1
-elif distro.lower() == "openatv":
+elif distro.lower() == "openblackhole":
 	image = 0
-feedurl_atv = 'http://images.mynonpublic.com/openatv/%s' %ImageVersion
+feedurl_atv = 'http://panel.vuplus-images.co.uk/Vuplus-Images-Panel/BackUpImages/vusolo2'
 
-if ImageVersion == '5.3':
-	ImageVersion2= '5.4'
-else:
-	ImageVersion2= '5.3'
-feedurl_atv2= 'http://images.mynonpublic.com/openatv/%s' %ImageVersion2
-feedurl_om = 'http://image.openmips.com/5.3'
 imagePath = '/media/hdd/images'
 flashPath = '/media/hdd/images/flash'
 flashTmp = '/media/hdd/images/tmp'
